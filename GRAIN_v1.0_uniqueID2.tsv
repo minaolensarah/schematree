@@ -1,0 +1,14 @@
+parentID	nodeID	node	elementCardinality	dataType	leaf	conceptualCardinality	conditions	comment
+1000	1001	result	0-1	array	1	0-n	-	-
+1000	1002	input	0-1	array	1	0-n	-	-
+1000	1003	workflowSteps	0-1	array	0	0-n	-	-
+1003	1004	description	0-1	string	1	0-1	-	-
+1003	1005	mode	0-1	string	1	0-1	-	-
+1003	1006	operators	0-1	array	0	0-n	-	-
+1006	1007	name	0-1	string	1	0-1	-	-
+1006	1008	version	0-1	string	1	0-1	-	-
+1006	1009	parameters	0-1	string	1	0-n	-	-
+1006	1010	components	0-1	array	0	0-n	-	-
+1010	1011	name	0-1	string	1	0-1	-	-
+1010	1012	version	0-1	string	1	0-1	-	-
+1010	1013	type	0-1	string	1	0-1	-	-

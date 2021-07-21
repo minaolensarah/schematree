@@ -1,0 +1,32 @@
+parentID	nodeID	node	elementCardinality	dataType	leaf	conceptualCardinality	conditions	comment
+2000	2001	title	0-1	string	1	0-1	-	Short label assigned by the user
+2000	2002	schemaVersion	0-1	string	1	0-1	-	Version of the metadata schema used - 1 or 1.0 for this initial schema definition
+2000	2003	description	0-1	string	1	0-1	-	Free form text where the user can describe the workflow step
+2000	2004	timestamp	0-1	string	1	0-1	-	Date and time of this step's recording YYYY-MM-DD hh:mm:ss
+2000	2005	input	0-1	array of resource objects	0	0-n	uniqueItems	List of input resources, usually local files | A non-person participant of the workflow
+2000	2006	tool	0-1	object or resource object	0	0-1	-	An executable used to produce the output resources
+2000	2007	persons	0-1	array of person objects	0	0-n	-	List of human participants in this workflow step
+2000	2008	output	0-1	array of resource objects	0	0-n	uniqueItems	List of output resources, exclusively local files
+2000	2009	properties	0-1	object	0	0-1	-	Map of additional meta informations provided outside of pure process metadata as string-string mappings
+2005	2010	type	1-1	string or {Audiovisual,Collection,Dataset,Event,Image,InteractiveResource,Model,PhysicalObject,Service,Software,Sound,Text,Workflow,Other}	1	1-1	-	Open description of a resource type, allows free type naming besides the core set of DataCite values(List of basic resource types borrowed from DataCite kernel 4.0 as resourceTypesGeneral). Potential format recommendation: Role/Subrole with Role being an instance from the resourceTypesGeneral list and Subrole a more specified variant.
+2005	2011	identifiers	1-1	array of resouceIdentifier objects	0	1-n	uniqueItems	Typed identifier for resources (files, services, tools, ...) involved in the workflow
+2005	2012	checksum	0-1	string	1	0-1	-	-
+2006	2013	type	1-1	string or {Audiovisual,Collection,Dataset,Event,Image,InteractiveResource,Model,PhysicalObject,Service,Software,Sound,Text,Workflow,Other}	1	1-1	ALT1	Open description of a resource type, allows free type naming besides the core set of DataCite values(List of basic resource types borrowed from DataCite kernel 4.0 as resourceTypesGeneral). Potential format recommendation: Role/Subrole with Role being an instance from the resourceTypesGeneral list and Subrole a more specified variant.
+2006	2014	identifiers	1-1	array of resouceIdentifier objects	0	1-n	ALT1 | uniqueItems	Typed identifier for resources (files, services, tools, ...) involved in the workflow
+2006	2015	checksum	0-1	string	1	0-1	ALT1	-
+2006	2016	parameters	0-1	string	1	0-1	ALT2	For command line execution the raw set of parameters or even the complete call as entered on the shell should go here. In case of complex configuration files being used it is better to add them as a separate input resource of appropriate type.
+2006	2017	environment	0-1	string	1	0-1	ALT2	It might be reasonable to record the local execution environment for local executables. Like OS, architecture, etc...
+2007	2018	role	1-1	string or {Annotator,Operator,Curator,Editor,Creator,PI,Participant,Other}	1	0-1	-	Open description of a person's role in a workflow step | List of a few typical roles for humans in a workflow step
+2007	2019	identifiers	1-1	array of personIdentifier objects	0	1-n	uniqueItems	Typed identifier for persons involved in the workflow
+2008	2020	type	1-1	string or {Audiovisual,Collection,Dataset,Event,Image,InteractiveResource,Model,PhysicalObject,Service,Software,Sound,Text,Workflow,Other}	1	1-1	-	Open description of a resource type, allows free type naming besides the core set of DataCite values(List of basic resource types borrowed from DataCite kernel 4.0 as resourceTypesGeneral). Potential format recommendation: Role/Subrole with Role being an instance from the resourceTypesGeneral list and Subrole a more specified variant.
+2008	2021	identifiers	1-1	array of resouceIdentifier objects	0	1-n	uniqueItems	-
+2008	2022	checksum	0-1	string	1	0-1	-	-
+2009	2023	[additionalProperties]	0-n	string	1	0-n	-	-
+2011	2024	type	1-1	string or {URL,VLO-Handle,DOI,RDH-ID,other}	1	1-1	-	List of ways to identify a single resource. The RDH-ID term is a placeholder for the client internal referencing mechanism and depending on the storage solution it will interface with.
+2011	2025	id 	1-1	string	1	1-1	-	-
+2014	2026	type	1-1	string or {URL,VLO-Handle,DOI,RDH-ID,other}	1	1-1	-	List of ways to identify a single resource. The RDH-ID term is a placeholder for the client internal referencing mechanism and depending on the storage solution it will interface with.
+2014	2027	id 	1-1	string	1	1-1	-	-
+2019	2028	type	1-1	string or {alias,name,firstname-lastname,ORCID,other}	1	1-1	-	List options on how to identify a person
+2019	2029	id 	1-1	string	1	1-1	-	-
+2021	2030	type	1-1	string or {URL,VLO-Handle,DOI,RDH-ID,other}	1	1-1	-	List of ways to identify a single resource. The RDH-ID term is a placeholder for the client internal referencing mechanism and depending on the storage solution it will interface with.
+2021	2031	id 	1-1	string	1	1-1	-	-

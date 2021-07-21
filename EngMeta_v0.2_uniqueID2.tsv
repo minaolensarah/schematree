@@ -1,0 +1,122 @@
+parentID	nodeID	node	elementCardinality	dataType	leaf	conceptualCardinality	conditions	comment
+3000	3001	provenance	0-1	complex	0	0-1	-	Information about the data provenance for replication: Who did what with which method with the data
+3001	3002	step	1-n	processingStep	0	1-n	-	Specification of one processingStep in the data life cycle of the data with actor (pseudonymized), date, used method, software and hardware, input and output (files).
+3002	3003	order	0-1	integer	1	0-1	-	attribute
+3002	3004	type	1-1	{generation, postprocessing, analysis, other}	1	1-1	-	prov:type | Specifies the position in the data life cycle.
+3002	3005	actor	0-n	personOrOrganization	0	0-n	-	prov:Person | prov:Agent | prov:wasStartedBy| prov:wasInfluencedBy | Specifies a person or organization involved in the data creation process
+3002	3006	date	0-1	dateTime	1	0-1	-	prov:startAtTime | prov:endAtTime
+3002	3007	method	0-n	method	0	0-n	-	prov:Entity | prov:used | prov:Activity | prov:Plan? | Beschreibung, Parameter der Methode fehlen | Definition of used method with name and parameters
+3002	3008	errorMethod	0-n	method	0	0-n	-	prov:Entity | prov:used
+3002	3009	input	0-n	fileOrResource	0	0-n	-	prov:Entity | prov:used | Input file(s)
+3002	3010	tool	0-n	software	0	0-n	-	prov:SoftwareAgent | Software used | Software or code, described according to the CodeMeta-Schema (https://codemeta.github.io/). The Software must have a name and can be described further by version (softwareVersion), programmingLanguage, operatingSystem. An unbounded number of contributors can be specified. The location of the software can be specified by an URL, (an URL to the) SoftwareSourceCode, (an URL to the) SoftwareApplication and/or the codeRepository. The attribution of the software can be given by contributor, citation and referencePublication. License specifies the license under which the software was used.
+3002	3011	executionCommand	0-n	string	1	0-n	-	new in version 1.1 | Command executed
+3002	3012	instrument	0-n	instrumentType	0	0-n	-	prov:Entity | prov:used | Hardware used
+3002	3013	environment	0-1	environment	0	0-1	-	prov:Entity | prov:used | Computing environment | Computation environment of the data. Important for numerical simulations or other software code. Is specified by a name, the number of nodes and the number of processors per node (ppn). An unbounded number of compilers can be specified by name and flags
+3002	3014	system	0-1	IDREF	1	0-1	-	Reference on observed system
+3002	3015	output	0-n	fileOrResource	0	0-n	-	prov:Entity  | prov:wasGeneratedBy | Output file(s)
+3005	3016	name	1-1	string	1	1-1	-	"creatorName bei Datacite | Name of a person shall be written as ""familiyName, givenName"" |  actor (pseudonymized)"
+3005	3017	givenName	0-1	string	1	0-1	-	actor (pseudonymized)
+3005	3018	familyName	0-1	string	1	0-1	-	actor (pseudonymized)
+3005	3019	address	0-1	string	1	0-1	-	Contact information (important for the contact person/organization of the data) can be given by email and address
+3005	3020	affiliation	0-1	personOrOrganization	0	0-1	-	REKURSION
+3005	3021	email	0-1	string	1	0-1	-	0-n in Doku, 0-1 in Schema | Contact information (important for the contact person/organization of the data) can be given by email and address
+3005	3022	id	0-n	pid	0	0-n	-	leaf+attributes | ID can be an ORCID. | Persistent identifier as URI, can ge further specified through a type and a scheme. | Was ist mit FunderRef IDs (siehe fundingInformation)
+3005	3023	role	0-1	dtc:contributorType={ContactPerson, DataCollector, DataCurator, DataManager, Distributor, Editor, HostingInstitution, Producer, ProjectLeader, ProjectManager, ProjectMember, RegistrationAgency, RegistrationAuthority, RelatedPerson, Researcher, ResearchGroup, RightsHolder, Sponsor, Supervisor, WorkPackageLeader, Other}	1	0-1	-	Role is one of the list of the contributorType from DataCite (view-source: https://schema.datacite.org/meta/kernel-4.1/include/datacite-contributorType-v4.xsd). | DataCurator fehlt in Dokumentation
+3007	3024	name	1-1	string	0	1-1	-	leaf+attributes | Name of the method can be free text or can belong to a controlled vocabulary. In this case, the vocabulary is defined by methodScheme and methodURI, the term by the termURI.  In both cases language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt) | with attributes “scheme”, “schemeURI” to define a vocabulary, “valueURI” to define a term of the vocabulary and “xml:lang” for language
+3007	3025	description	0-1	string	1	0-1	-	new in version 1.1 
+3007	3026	parameter	0-n	variable	0	0-n	-	Variable, used as parameter, observed variable or controlled variable. Must have a name and can have a value with unit. Can be represented by a symbol.
+3008	3027	name	1-1	string	0	1-1	-	leaf+attributes | Name of the method can be free text or can belong to a controlled vocabulary. In this case, the vocabulary is defined by methodScheme and methodURI, the term by the termURI.  In both cases language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt) | with attributes “scheme”, “schemeURI” to define a vocabulary, “valueURI” to define a term of the vocabulary and “xml:lang” for language
+3008	3028	description	0-1	string	1	0-1	-	new in version 1.1 
+3008	3029	parameter	0-n	variable	0	0-n	-	Variable, used as parameter, observed variable or controlled variable. Must have a name and can have a value with unit. Can be represented by a symbol.
+3009	3030	id	0-1	pid	0	0-1	-	-
+3009	3031	link	0-n	anyURI	1	0-n	-	-
+3009	3032	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+3010	3033	name	1-1	string	1	1-1	-	-
+3010	3034	contributor	0-n	personOrOrganization	0	0-n	-	Author(s)
+3010	3035	softwareVersion	1-1	string	1	1-1	-	major.minor | aus codemeta
+3010	3036	programmingLanguage	0-n	string	1	0-n	-	Programming language(s)
+3010	3037	operatingSystem	0-n	string	1	0-n	-	from CodeMeta | Operating System(s)
+3010	3038	URL	0-1	anyURI	1	0-1	-	kann auch Link zu Software-Datenpaket sein
+3010	3039	SoftwareSourceCode	0-1	fileOrResource	0	0-1	-	Link to SourceCode  
+3010	3040	SoftwareApplication	0-1	fileOrResource	0	0-1	-	Link to the executable program
+3010	3041	codeRepository	0-1	anyURI	1	0-1	-	aus CodeMeta
+3010	3042	licence	0-n	pm:licenseInformationComplexType	0	0-n	-	pm:licenceInformationComplexType (alternatively dc:licence) (premis)
+3010	3043	citation	0-1	string	1	0-1	-	-
+3010	3044	referencePublication	0-1	publication	0	0-1	-	Related publication describing the data. (in documentation: title , author year, not in schema)| Publications related to/based on the research data, oder entfernen und nur unter Kontext?
+3013	3045	name	0-1	string	1	0-1	- 	Name of the system
+3013	3046	compiler	0-n	complex	0	0-n	- 	An unbounded number of compilers can be specified by name and flags
+3013	3047	nodes	0-1	string	1	0-1	- 	number of nodes
+3013	3048	ppn	0-1	string	1	0-1	- 	number of processors per node
+3013	3049	cpu	0-n	string	1	0-n	- 	new in version 1.1 |   CPU model
+3015	3050	id	0-1	pid	0	0-1	-	-
+3015	3051	link	0-n	anyURI	1	0-n	-	-
+3015	3052	checksum	0-n	checksumType	0	0-n	-	-
+3022	3053	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3022	3054	scheme	0-1	string	1	0-1	-	-
+3022	3055	[value]	1-1	string	1	0-1	-	can be empty string
+3024	3056	methodScheme	0-1	string	1	0-1	-	attribute
+3024	3057	schemeURI	0-1	anyURI	1	0-1	-	attribute
+3024	3058	valueURI	0-1	anyURI	1	0-1	-	attribute
+3024	3059	xml:lang	1-1	TODO	1	1-1	-	attribute  | language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+3024	3060	[value]	1-1	string	1	0-1	-	can be empty string
+3026	3061	name	1-1	string	1	1-1	-	variable name
+3026	3062	symbol	0-1	string	1	0-1	-	formula symbol
+3026	3063	value 	0-1	string	1	0-1	-	Variable value (for controlled variables or parameters)
+3026	3064	unit	0-1	string	1	0-1	-	UN/CEFACT Common Codes for Units of Measurement | SI
+3026	3065	uncertainty	0-1	decimal	1	0-1	-	unklar | float
+3027	3066	methodScheme	0-1	string	1	0-1	-	attribute
+3027	3067	schemeURI	0-1	anyURI	1	0-1	-	attribute
+3027	3068	valueURI	0-1	anyURI	1	0-1	-	attribute
+3027	3069	xml:lang	1-1	TODO	1	1-1	-	attribute  | language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+3027	3070	[value]	1-1	string	1	0-1	-	can be empty string
+3029	3071	name	1-1	string	1	1-1	-	variable name
+3029	3072	symbol	0-1	string	1	0-1	-	formula symbol
+3029	3073	value 	0-1	string	1	0-1	-	Variable value (for controlled variables or parameters)
+3029	3074	unit	0-1	string	1	0-1	-	UN/CEFACT Common Codes for Units of Measurement | SI
+3029	3075	uncertainty	0-1	decimal	1	0-1	-	unklar | float
+3030	3076	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3030	3077	scheme	0-1	string	1	0-1	-	-
+3030	3078	[value]	1-1	string	1	0-1	-	can be empty string
+3032	3079	algorithm	0-1	string	1	0-1	-	checksum algorithm
+3032	3080	[value]	1-1	string	1	0-1	-	can be empty string
+3034	3081	name	1-1	string	1	1-1	-	"creatorName bei Datacite | Name of a person shall be written as ""familiyName, givenName"" |  actor (pseudonymized)"
+3034	3082	givenName	0-1	string	1	0-1	-	actor (pseudonymized)
+3034	3083	familyName	0-1	string	1	0-1	-	actor (pseudonymized)
+3034	3084	address	0-1	string	1	0-1	-	Contact information (important for the contact person/organization of the data) can be given by email and address
+3034	3085	affiliation	0-1	personOrOrganization	0	0-1	-	REKURSION
+3034	3086	email	0-1	string	1	0-1	-	0-n in Doku, 0-1 in Schema | Contact information (important for the contact person/organization of the data) can be given by email and address
+3034	3087	id	0-n	pid	0	0-n	-	leaf+attributes | ID can be an ORCID. | Persistent identifier as URI, can ge further specified through a type and a scheme. | Was ist mit FunderRef IDs (siehe fundingInformation)
+3034	3088	role	0-1	dtc:contributorType={ContactPerson, DataCollector, DataCurator, DataManager, Distributor, Editor, HostingInstitution, Producer, ProjectLeader, ProjectManager, ProjectMember, RegistrationAgency, RegistrationAuthority, RelatedPerson, Researcher, ResearchGroup, RightsHolder, Sponsor, Supervisor, WorkPackageLeader, Other}	1	0-1	-	Role is one of the list of the contributorType from DataCite (view-source: https://schema.datacite.org/meta/kernel-4.1/include/datacite-contributorType-v4.xsd). | DataCurator fehlt in Dokumentation
+3039	3089	id	0-1	pid	0	0-1	-	-
+3039	3090	link	0-n	anyURI	1	0-n	-	-
+3039	3091	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+3040	3092	id	0-1	pid	0	0-1	-	-
+3040	3093	link	0-n	anyURI	1	0-n	-	-
+3040	3094	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+3044	3095	id	0-1	pid	0	0-1	-	-
+3044	3096	citation	0-1	string	1	0-1	-	ganzer Bibtex-Eintrag? Oder nur Identifier
+3044	3097	url	0-1	anyURI	1	0-1	-	-
+3046	3098	name	1-1	string	1	1-1	-	mandatory if compiler used | compiler name
+3046	3099	flags	1-1	string	1	1-1	-	mandatory if compiler used | compieler flags
+3050	3100	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3050	3101	scheme	0-1	string	1	0-1	-	-
+3050	3102	[value]	1-1	string	1	0-1	-	can be empty string
+3052	3103	algorithm	0-1	string	1	0-1	-	checksum algorithm
+3052	3104	[value]	1-1	string	1	0-1	-	can be empty string
+3087	3105	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3087	3106	scheme	0-1	string	1	0-1	-	-
+3087	3107	[value]	1-1	string	1	0-1	-	can be empty string
+3089	3108	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3089	3109	scheme	0-1	string	1	0-1	-	-
+3089	3110	[value]	1-1	string	1	0-1	-	can be empty string
+3091	3111	algorithm	0-1	string	1	0-1	-	checksum algorithm
+3091	3112	[value]	1-1	string	1	0-1	-	can be empty string
+3092	3113	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3092	3114	scheme	0-1	string	1	0-1	-	-
+3092	3115	[value]	1-1	string	1	0-1	-	can be empty string
+3094	3116	algorithm	0-1	string	1	0-1	-	checksum algorithm
+3094	3117	[value]	1-1	string	1	0-1	-	can be empty string
+3095	3118	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+3095	3119	scheme	0-1	string	1	0-1	-	-
+3095	3120	[value]	1-1	string	1	0-1	-	can be empty string
+3042	3121	TODO	TODO	TODO	0	TODO	-	-

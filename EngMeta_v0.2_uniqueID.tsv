@@ -1,0 +1,122 @@
+parentID	nodeID	node	elementCardinality	dataType	leaf	conceptualCardinality	conditions	comment
+E0	E1	provenance	0-1	complex	0	0-1	-	Information about the data provenance for replication: Who did what with which method with the data
+E1	E2	step	1-n	processingStep	0	1-n	-	Specification of one processingStep in the data life cycle of the data with actor (pseudonymized), date, used method, software and hardware, input and output (files).
+E2	E3	order	0-1	integer	1	0-1	-	attribute
+E2	E4	type	1-1	{generation, postprocessing, analysis, other}	1	1-1	-	prov:type | Specifies the position in the data life cycle.
+E2	E5	actor	0-n	personOrOrganization	0	0-n	-	prov:Person | prov:Agent | prov:wasStartedBy| prov:wasInfluencedBy | Specifies a person or organization involved in the data creation process
+E2	E6	date	0-1	dateTime	1	0-1	-	prov:startAtTime | prov:endAtTime
+E2	E7	method	0-n	method	0	0-n	-	prov:Entity | prov:used | prov:Activity | prov:Plan? | Beschreibung, Parameter der Methode fehlen | Definition of used method with name and parameters
+E2	E8	errorMethod	0-n	method	0	0-n	-	prov:Entity | prov:used
+E2	E9	input	0-n	fileOrResource	0	0-n	-	prov:Entity | prov:used | Input file(s)
+E2	E10	tool	0-n	software	0	0-n	-	prov:SoftwareAgent | Software used | Software or code, described according to the CodeMeta-Schema (https://codemeta.github.io/). The Software must have a name and can be described further by version (softwareVersion), programmingLanguage, operatingSystem. An unbounded number of contributors can be specified. The location of the software can be specified by an URL, (an URL to the) SoftwareSourceCode, (an URL to the) SoftwareApplication and/or the codeRepository. The attribution of the software can be given by contributor, citation and referencePublication. License specifies the license under which the software was used.
+E2	E11	executionCommand	0-n	string	1	0-n	-	new in version 1.1 | Command executed
+E2	E12	instrument	0-n	instrumentType	0	0-n	-	prov:Entity | prov:used | Hardware used
+E2	E13	environment	0-1	environment	0	0-1	-	prov:Entity | prov:used | Computing environment | Computation environment of the data. Important for numerical simulations or other software code. Is specified by a name, the number of nodes and the number of processors per node (ppn). An unbounded number of compilers can be specified by name and flags
+E2	E14	system	0-1	IDREF	1	0-1	-	Reference on observed system
+E2	E15	output	0-n	fileOrResource	0	0-n	-	prov:Entity  | prov:wasGeneratedBy | Output file(s)
+E5	E16	name	1-1	string	1	1-1	-	"creatorName bei Datacite | Name of a person shall be written as ""familiyName, givenName"" |  actor (pseudonymized)"
+E5	E17	givenName	0-1	string	1	0-1	-	actor (pseudonymized)
+E5	E18	familyName	0-1	string	1	0-1	-	actor (pseudonymized)
+E5	E19	address	0-1	string	1	0-1	-	Contact information (important for the contact person/organization of the data) can be given by email and address
+E5	E20	affiliation	0-1	personOrOrganization	0	0-1	-	REKURSION
+E5	E21	email	0-1	string	1	0-1	-	0-n in Doku, 0-1 in Schema | Contact information (important for the contact person/organization of the data) can be given by email and address
+E5	E22	id	0-n	pid	0	0-n	-	leaf+attributes | ID can be an ORCID. | Persistent identifier as URI, can ge further specified through a type and a scheme. | Was ist mit FunderRef IDs (siehe fundingInformation)
+E5	E23	role	0-1	dtc:contributorType={ContactPerson, DataCollector, DataCurator, DataManager, Distributor, Editor, HostingInstitution, Producer, ProjectLeader, ProjectManager, ProjectMember, RegistrationAgency, RegistrationAuthority, RelatedPerson, Researcher, ResearchGroup, RightsHolder, Sponsor, Supervisor, WorkPackageLeader, Other}	1	0-1	-	Role is one of the list of the contributorType from DataCite (view-source: https://schema.datacite.org/meta/kernel-4.1/include/datacite-contributorType-v4.xsd). | DataCurator fehlt in Dokumentation
+E7	E24	name	1-1	string	0	1-1	-	leaf+attributes | Name of the method can be free text or can belong to a controlled vocabulary. In this case, the vocabulary is defined by methodScheme and methodURI, the term by the termURI.  In both cases language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt) | with attributes “scheme”, “schemeURI” to define a vocabulary, “valueURI” to define a term of the vocabulary and “xml:lang” for language
+E7	E25	description	0-1	string	1	0-1	-	new in version 1.1 
+E7	E26	parameter	0-n	variable	0	0-n	-	Variable, used as parameter, observed variable or controlled variable. Must have a name and can have a value with unit. Can be represented by a symbol.
+E8	E27	name	1-1	string	0	1-1	-	leaf+attributes | Name of the method can be free text or can belong to a controlled vocabulary. In this case, the vocabulary is defined by methodScheme and methodURI, the term by the termURI.  In both cases language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt) | with attributes “scheme”, “schemeURI” to define a vocabulary, “valueURI” to define a term of the vocabulary and “xml:lang” for language
+E8	E28	description	0-1	string	1	0-1	-	new in version 1.1 
+E8	E29	parameter	0-n	variable	0	0-n	-	Variable, used as parameter, observed variable or controlled variable. Must have a name and can have a value with unit. Can be represented by a symbol.
+E9	E30	id	0-1	pid	0	0-1	-	-
+E9	E31	link	0-n	anyURI	1	0-n	-	-
+E9	E32	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+E10	E33	name	1-1	string	1	1-1	-	-
+E10	E34	contributor	0-n	personOrOrganization	0	0-n	-	Author(s)
+E10	E35	softwareVersion	1-1	string	1	1-1	-	major.minor | aus codemeta
+E10	E36	programmingLanguage	0-n	string	1	0-n	-	Programming language(s)
+E10	E37	operatingSystem	0-n	string	1	0-n	-	from CodeMeta | Operating System(s)
+E10	E38	URL	0-1	anyURI	1	0-1	-	kann auch Link zu Software-Datenpaket sein
+E10	E39	SoftwareSourceCode	0-1	fileOrResource	0	0-1	-	Link to SourceCode  
+E10	E40	SoftwareApplication	0-1	fileOrResource	0	0-1	-	Link to the executable program
+E10	E41	codeRepository	0-1	anyURI	1	0-1	-	aus CodeMeta
+E10	E42	licence	0-n	pm:licenseInformationComplexType	0	0-n	-	pm:licenceInformationComplexType (alternatively dc:licence) (premis)
+E10	E43	citation	0-1	string	1	0-1	-	-
+E10	E44	referencePublication	0-1	publication	0	0-1	-	Related publication describing the data. (in documentation: title , author year, not in schema)| Publications related to/based on the research data, oder entfernen und nur unter Kontext?
+E13	E45	name	0-1	string	1	0-1	- 	Name of the system
+E13	E46	compiler	0-n	complex	0	0-n	- 	An unbounded number of compilers can be specified by name and flags
+E13	E47	nodes	0-1	string	1	0-1	- 	number of nodes
+E13	E48	ppn	0-1	string	1	0-1	- 	number of processors per node
+E13	E49	cpu	0-n	string	1	0-n	- 	new in version 1.1 |   CPU model
+E15	E50	id	0-1	pid	0	0-1	-	-
+E15	E51	link	0-n	anyURI	1	0-n	-	-
+E15	E52	checksum	0-n	checksumType	0	0-n	-	-
+E22	E53	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E22	E54	scheme	0-1	string	1	0-1	-	-
+E22	E55	[value]	1-1	string	1	0-1	-	can be empty string
+E24	E56	methodScheme	0-1	string	1	0-1	-	attribute
+E24	E57	schemeURI	0-1	anyURI	1	0-1	-	attribute
+E24	E58	valueURI	0-1	anyURI	1	0-1	-	attribute
+E24	E59	xml:lang	1-1	TODO	1	1-1	-	attribute  | language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+E24	E60	[value]	1-1	string	1	0-1	-	can be empty string
+E26	E61	name	1-1	string	1	1-1	-	variable name
+E26	E62	symbol	0-1	string	1	0-1	-	formula symbol
+E26	E63	value 	0-1	string	1	0-1	-	Variable value (for controlled variables or parameters)
+E26	E64	unit	0-1	string	1	0-1	-	UN/CEFACT Common Codes for Units of Measurement | SI
+E26	E65	uncertainty	0-1	decimal	1	0-1	-	unklar | float
+E27	E66	methodScheme	0-1	string	1	0-1	-	attribute
+E27	E67	schemeURI	0-1	anyURI	1	0-1	-	attribute
+E27	E68	valueURI	0-1	anyURI	1	0-1	-	attribute
+E27	E69	xml:lang	1-1	TODO	1	1-1	-	attribute  | language can be specified through the xml:lang-attribute according to BCP47 (http://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+E27	E70	[value]	1-1	string	1	0-1	-	can be empty string
+E29	E71	name	1-1	string	1	1-1	-	variable name
+E29	E72	symbol	0-1	string	1	0-1	-	formula symbol
+E29	E73	value 	0-1	string	1	0-1	-	Variable value (for controlled variables or parameters)
+E29	E74	unit	0-1	string	1	0-1	-	UN/CEFACT Common Codes for Units of Measurement | SI
+E29	E75	uncertainty	0-1	decimal	1	0-1	-	unklar | float
+E30	E76	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E30	E77	scheme	0-1	string	1	0-1	-	-
+E30	E78	[value]	1-1	string	1	0-1	-	can be empty string
+E32	E79	algorithm	0-1	string	1	0-1	-	checksum algorithm
+E32	E80	[value]	1-1	string	1	0-1	-	can be empty string
+E34	E81	name	1-1	string	1	1-1	-	"creatorName bei Datacite | Name of a person shall be written as ""familiyName, givenName"" |  actor (pseudonymized)"
+E34	E82	givenName	0-1	string	1	0-1	-	actor (pseudonymized)
+E34	E83	familyName	0-1	string	1	0-1	-	actor (pseudonymized)
+E34	E84	address	0-1	string	1	0-1	-	Contact information (important for the contact person/organization of the data) can be given by email and address
+E34	E85	affiliation	0-1	personOrOrganization	0	0-1	-	REKURSION
+E34	E86	email	0-1	string	1	0-1	-	0-n in Doku, 0-1 in Schema | Contact information (important for the contact person/organization of the data) can be given by email and address
+E34	E87	id	0-n	pid	0	0-n	-	leaf+attributes | ID can be an ORCID. | Persistent identifier as URI, can ge further specified through a type and a scheme. | Was ist mit FunderRef IDs (siehe fundingInformation)
+E34	E88	role	0-1	dtc:contributorType={ContactPerson, DataCollector, DataCurator, DataManager, Distributor, Editor, HostingInstitution, Producer, ProjectLeader, ProjectManager, ProjectMember, RegistrationAgency, RegistrationAuthority, RelatedPerson, Researcher, ResearchGroup, RightsHolder, Sponsor, Supervisor, WorkPackageLeader, Other}	1	0-1	-	Role is one of the list of the contributorType from DataCite (view-source: https://schema.datacite.org/meta/kernel-4.1/include/datacite-contributorType-v4.xsd). | DataCurator fehlt in Dokumentation
+E39	E89	id	0-1	pid	0	0-1	-	-
+E39	E90	link	0-n	anyURI	1	0-n	-	-
+E39	E91	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+E40	E92	id	0-1	pid	0	0-1	-	-
+E40	E93	link	0-n	anyURI	1	0-n	-	-
+E40	E94	checksum	0-n	checksumType	0	0-n	-	leaf+attributes | Checksum of a file with optional definition of the checksum algorithm
+E44	E95	id	0-1	pid	0	0-1	-	-
+E44	E96	citation	0-1	string	1	0-1	-	ganzer Bibtex-Eintrag? Oder nur Identifier
+E44	E97	url	0-1	anyURI	1	0-1	-	-
+E46	E98	name	1-1	string	1	1-1	-	mandatory if compiler used | compiler name
+E46	E99	flags	1-1	string	1	1-1	-	mandatory if compiler used | compieler flags
+E50	E100	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E50	E101	scheme	0-1	string	1	0-1	-	-
+E50	E102	[value]	1-1	string	1	0-1	-	can be empty string
+E52	E103	algorithm	0-1	string	1	0-1	-	checksum algorithm
+E52	E104	[value]	1-1	string	1	0-1	-	can be empty string
+E87	E105	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E87	E106	scheme	0-1	string	1	0-1	-	-
+E87	E107	[value]	1-1	string	1	0-1	-	can be empty string
+E89	E108	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E89	E109	scheme	0-1	string	1	0-1	-	-
+E89	E110	[value]	1-1	string	1	0-1	-	can be empty string
+E91	E111	algorithm	0-1	string	1	0-1	-	checksum algorithm
+E91	E112	[value]	1-1	string	1	0-1	-	can be empty string
+E92	E113	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E92	E114	scheme	0-1	string	1	0-1	-	-
+E92	E115	[value]	1-1	string	1	0-1	-	can be empty string
+E94	E116	algorithm	0-1	string	1	0-1	-	checksum algorithm
+E94	E117	[value]	1-1	string	1	0-1	-	can be empty string
+E95	E118	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
+E95	E119	scheme	0-1	string	1	0-1	-	-
+E95	E120	[value]	1-1	string	1	0-1	-	can be empty string
+E42	E121	TODO	TODO	TODO	0	TODO	-	-
