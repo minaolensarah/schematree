@@ -120,4 +120,4 @@ E95	E118	type	1-1	{doi,urn,epic,handle,orcid,gnd,other}	1	1-1	-	-
 E95	E119	scheme	0-1	string	1	0-1	-	-
 E95	E120	[value]	1-1	string	1	0-1	-	can be empty string
 E42	E121	TODO	TODO	TODO	0	TODO	-	-
-E0  E0  
+E0  E0  root
