@@ -1,0 +1,616 @@
+[
+{
+    "id":0,
+    "name":"root"
+},
+{
+"parent": 0,
+"id":E0,
+"name":"node"
+},
+{
+"parent": E0,
+"id":E1,
+"name":"provenance"
+},
+{
+"parent": E1,
+"id":E2,
+"name":"step"
+},
+{
+"parent": E2,
+"id":E3,
+"name":"order"
+},
+{
+"parent": E2,
+"id":E4,
+"name":"type"
+},
+{
+"parent": E2,
+"id":E5,
+"name":"actor"
+},
+{
+"parent": E2,
+"id":E6,
+"name":"date"
+},
+{
+"parent": E2,
+"id":E7,
+"name":"method"
+},
+{
+"parent": E2,
+"id":E8,
+"name":"errorMethod"
+},
+{
+"parent": E2,
+"id":E9,
+"name":"input"
+},
+{
+"parent": E2,
+"id":E10,
+"name":"tool"
+},
+{
+"parent": E2,
+"id":E11,
+"name":"executionCommand"
+},
+{
+"parent": E2,
+"id":E12,
+"name":"instrument"
+},
+{
+"parent": E2,
+"id":E13,
+"name":"environment"
+},
+{
+"parent": E2,
+"id":E14,
+"name":"system"
+},
+{
+"parent": E2,
+"id":E15,
+"name":"output"
+},
+{
+"parent": E5,
+"id":E16,
+"name":"name"
+},
+{
+"parent": E5,
+"id":E17,
+"name":"givenName"
+},
+{
+"parent": E5,
+"id":E18,
+"name":"familyName"
+},
+{
+"parent": E5,
+"id":E19,
+"name":"address"
+},
+{
+"parent": E5,
+"id":E20,
+"name":"affiliation"
+},
+{
+"parent": E5,
+"id":E21,
+"name":"email"
+},
+{
+"parent": E5,
+"id":E22,
+"name":"id"
+},
+{
+"parent": E5,
+"id":E23,
+"name":"role"
+},
+{
+"parent": E7,
+"id":E24,
+"name":"name"
+},
+{
+"parent": E7,
+"id":E25,
+"name":"description"
+},
+{
+"parent": E7,
+"id":E26,
+"name":"parameter"
+},
+{
+"parent": E8,
+"id":E27,
+"name":"name"
+},
+{
+"parent": E8,
+"id":E28,
+"name":"description"
+},
+{
+"parent": E8,
+"id":E29,
+"name":"parameter"
+},
+{
+"parent": E9,
+"id":E30,
+"name":"id"
+},
+{
+"parent": E9,
+"id":E31,
+"name":"link"
+},
+{
+"parent": E9,
+"id":E32,
+"name":"checksum"
+},
+{
+"parent": E10,
+"id":E33,
+"name":"name"
+},
+{
+"parent": E10,
+"id":E34,
+"name":"contributor"
+},
+{
+"parent": E10,
+"id":E35,
+"name":"softwareVersion"
+},
+{
+"parent": E10,
+"id":E36,
+"name":"programmingLanguage"
+},
+{
+"parent": E10,
+"id":E37,
+"name":"operatingSystem"
+},
+{
+"parent": E10,
+"id":E38,
+"name":"URL"
+},
+{
+"parent": E10,
+"id":E39,
+"name":"SoftwareSourceCode"
+},
+{
+"parent": E10,
+"id":E40,
+"name":"SoftwareApplication"
+},
+{
+"parent": E10,
+"id":E41,
+"name":"codeRepository"
+},
+{
+"parent": E10,
+"id":E42,
+"name":"licence"
+},
+{
+"parent": E10,
+"id":E43,
+"name":"citation"
+},
+{
+"parent": E10,
+"id":E44,
+"name":"referencePublication"
+},
+{
+"parent": E13,
+"id":E45,
+"name":"name"
+},
+{
+"parent": E13,
+"id":E46,
+"name":"compiler"
+},
+{
+"parent": E13,
+"id":E47,
+"name":"nodes"
+},
+{
+"parent": E13,
+"id":E48,
+"name":"ppn"
+},
+{
+"parent": E13,
+"id":E49,
+"name":"cpu"
+},
+{
+"parent": E15,
+"id":E50,
+"name":"id"
+},
+{
+"parent": E15,
+"id":E51,
+"name":"link"
+},
+{
+"parent": E15,
+"id":E52,
+"name":"checksum"
+},
+{
+"parent": E22,
+"id":E53,
+"name":"type"
+},
+{
+"parent": E22,
+"id":E54,
+"name":"scheme"
+},
+{
+"parent": E22,
+"id":E55,
+"name":"[value]"
+},
+{
+"parent": E24,
+"id":E56,
+"name":"methodScheme"
+},
+{
+"parent": E24,
+"id":E57,
+"name":"schemeURI"
+},
+{
+"parent": E24,
+"id":E58,
+"name":"valueURI"
+},
+{
+"parent": E24,
+"id":E59,
+"name":"xml:lang"
+},
+{
+"parent": E24,
+"id":E60,
+"name":"[value]"
+},
+{
+"parent": E26,
+"id":E61,
+"name":"name"
+},
+{
+"parent": E26,
+"id":E62,
+"name":"symbol"
+},
+{
+"parent": E26,
+"id":E63,
+"name":"value"
+},
+{
+"parent": E26,
+"id":E64,
+"name":"unit"
+},
+{
+"parent": E26,
+"id":E65,
+"name":"uncertainty"
+},
+{
+"parent": E27,
+"id":E66,
+"name":"methodScheme"
+},
+{
+"parent": E27,
+"id":E67,
+"name":"schemeURI"
+},
+{
+"parent": E27,
+"id":E68,
+"name":"valueURI"
+},
+{
+"parent": E27,
+"id":E69,
+"name":"xml:lang"
+},
+{
+"parent": E27,
+"id":E70,
+"name":"[value]"
+},
+{
+"parent": E29,
+"id":E71,
+"name":"name"
+},
+{
+"parent": E29,
+"id":E72,
+"name":"symbol"
+},
+{
+"parent": E29,
+"id":E73,
+"name":"value"
+},
+{
+"parent": E29,
+"id":E74,
+"name":"unit"
+},
+{
+"parent": E29,
+"id":E75,
+"name":"uncertainty"
+},
+{
+"parent": E30,
+"id":E76,
+"name":"type"
+},
+{
+"parent": E30,
+"id":E77,
+"name":"scheme"
+},
+{
+"parent": E30,
+"id":E78,
+"name":"[value]"
+},
+{
+"parent": E32,
+"id":E79,
+"name":"algorithm"
+},
+{
+"parent": E32,
+"id":E80,
+"name":"[value]"
+},
+{
+"parent": E34,
+"id":E81,
+"name":"name"
+},
+{
+"parent": E34,
+"id":E82,
+"name":"givenName"
+},
+{
+"parent": E34,
+"id":E83,
+"name":"familyName"
+},
+{
+"parent": E34,
+"id":E84,
+"name":"address"
+},
+{
+"parent": E34,
+"id":E85,
+"name":"affiliation"
+},
+{
+"parent": E34,
+"id":E86,
+"name":"email"
+},
+{
+"parent": E34,
+"id":E87,
+"name":"id"
+},
+{
+"parent": E34,
+"id":E88,
+"name":"role"
+},
+{
+"parent": E39,
+"id":E89,
+"name":"id"
+},
+{
+"parent": E39,
+"id":E90,
+"name":"link"
+},
+{
+"parent": E39,
+"id":E91,
+"name":"checksum"
+},
+{
+"parent": E40,
+"id":E92,
+"name":"id"
+},
+{
+"parent": E40,
+"id":E93,
+"name":"link"
+},
+{
+"parent": E40,
+"id":E94,
+"name":"checksum"
+},
+{
+"parent": E44,
+"id":E95,
+"name":"id"
+},
+{
+"parent": E44,
+"id":E96,
+"name":"citation"
+},
+{
+"parent": E44,
+"id":E97,
+"name":"url"
+},
+{
+"parent": E46,
+"id":E98,
+"name":"name"
+},
+{
+"parent": E46,
+"id":E99,
+"name":"flags"
+},
+{
+"parent": E50,
+"id":E100,
+"name":"type"
+},
+{
+"parent": E50,
+"id":E101,
+"name":"scheme"
+},
+{
+"parent": E50,
+"id":E102,
+"name":"[value]"
+},
+{
+"parent": E52,
+"id":E103,
+"name":"algorithm"
+},
+{
+"parent": E52,
+"id":E104,
+"name":"[value]"
+},
+{
+"parent": E87,
+"id":E105,
+"name":"type"
+},
+{
+"parent": E87,
+"id":E106,
+"name":"scheme"
+},
+{
+"parent": E87,
+"id":E107,
+"name":"[value]"
+},
+{
+"parent": E89,
+"id":E108,
+"name":"type"
+},
+{
+"parent": E89,
+"id":E109,
+"name":"scheme"
+},
+{
+"parent": E89,
+"id":E110,
+"name":"[value]"
+},
+{
+"parent": E91,
+"id":E111,
+"name":"algorithm"
+},
+{
+"parent": E91,
+"id":E112,
+"name":"[value]"
+},
+{
+"parent": E92,
+"id":E113,
+"name":"type"
+},
+{
+"parent": E92,
+"id":E114,
+"name":"scheme"
+},
+{
+"parent": E92,
+"id":E115,
+"name":"[value]"
+},
+{
+"parent": E94,
+"id":E116,
+"name":"algorithm"
+},
+{
+"parent": E94,
+"id":E117,
+"name":"[value]"
+},
+{
+"parent": E95,
+"id":E118,
+"name":"type"
+},
+{
+"parent": E95,
+"id":E119,
+"name":"scheme"
+},
+{
+"parent": E95,
+"id":E120,
+"name":"[value]"
+},
+{
+"parent": E42,
+"id":E121,
+"name":"TODO"
+}
+]
