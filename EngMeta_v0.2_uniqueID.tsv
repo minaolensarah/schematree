@@ -1,5 +1,5 @@
 parentID	nodeID	node	elementCardinality	dataType	leaf	conceptualCardinality	conditions	comment
-E0  E0  root
+    E0  root
 E0	E1	provenance	0-1	complex	0	0-1	-	Information about the data provenance for replication: Who did what with which method with the data
 E1	E2	step	1-n	processingStep	0	1-n	-	Specification of one processingStep in the data life cycle of the data with actor (pseudonymized), date, used method, software and hardware, input and output (files).
 E2	E3	order	0-1	integer	1	0-1	-	attribute
