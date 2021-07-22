@@ -1,0 +1,163 @@
+[{"id":0,
+"name":"root"
+},
+{
+    "parent": 0,
+    "id":2000,
+    "name":"root_link"
+    },
+{
+"parent": 2000,
+"id":2001,
+"name":"title"
+},
+{
+"parent": 2000,
+"id":2002,
+"name":"schemaVersion"
+},
+{
+"parent": 2000,
+"id":2003,
+"name":"description"
+},
+{
+"parent": 2000,
+"id":2004,
+"name":"timestamp"
+},
+{
+"parent": 2000,
+"id":2005,
+"name":"input"
+},
+{
+"parent": 2000,
+"id":2006,
+"name":"tool"
+},
+{
+"parent": 2000,
+"id":2007,
+"name":"persons"
+},
+{
+"parent": 2000,
+"id":2008,
+"name":"output"
+},
+{
+"parent": 2000,
+"id":2009,
+"name":"properties"
+},
+{
+"parent": 2005,
+"id":2010,
+"name":"type"
+},
+{
+"parent": 2005,
+"id":2011,
+"name":"identifiers"
+},
+{
+"parent": 2005,
+"id":2012,
+"name":"checksum"
+},
+{
+"parent": 2006,
+"id":2013,
+"name":"type"
+},
+{
+"parent": 2006,
+"id":2014,
+"name":"identifiers"
+},
+{
+"parent": 2006,
+"id":2015,
+"name":"checksum"
+},
+{
+"parent": 2006,
+"id":2016,
+"name":"parameters"
+},
+{
+"parent": 2006,
+"id":2017,
+"name":"environment"
+},
+{
+"parent": 2007,
+"id":2018,
+"name":"role"
+},
+{
+"parent": 2007,
+"id":2019,
+"name":"identifiers"
+},
+{
+"parent": 2008,
+"id":2020,
+"name":"type"
+},
+{
+"parent": 2008,
+"id":2021,
+"name":"identifiers"
+},
+{
+"parent": 2008,
+"id":2022,
+"name":"checksum"
+},
+{
+"parent": 2009,
+"id":2023,
+"name":"[additionalProperties]"
+},
+{
+"parent": 2011,
+"id":2024,
+"name":"type"
+},
+{
+"parent": 2011,
+"id":2025,
+"name":"id"
+},
+{
+"parent": 2014,
+"id":2026,
+"name":"type"
+},
+{
+"parent": 2014,
+"id":2027,
+"name":"id"
+},
+{
+"parent": 2019,
+"id":2028,
+"name":"type"
+},
+{
+"parent": 2019,
+"id":2029,
+"name":"id"
+},
+{
+"parent": 2021,
+"id":2030,
+"name":"type"
+},
+{
+"parent": 2021,
+"id":2031,
+"name":"id"
+}]

@@ -1,0 +1,844 @@
+[
+    {"id":0,
+        "name":"root"
+        },
+{
+    "parent": 0,
+    "id":2000,
+    "name":"root_link"
+    },
+{
+"parent": 2000,
+"id":2001,
+"name":"title"
+},
+{
+"parent": 2000,
+"id":2002,
+"name":"schemaVersion"
+},
+{
+"parent": 2000,
+"id":2003,
+"name":"description"
+},
+{
+"parent": 2000,
+"id":2004,
+"name":"timestamp"
+},
+{
+"parent": 2000,
+"id":2005,
+"name":"input"
+},
+{
+"parent": 2000,
+"id":2006,
+"name":"tool"
+},
+{
+"parent": 2000,
+"id":2007,
+"name":"persons"
+},
+{
+"parent": 2000,
+"id":2008,
+"name":"output"
+},
+{
+"parent": 2000,
+"id":2009,
+"name":"properties"
+},
+{
+"parent": 2005,
+"id":2010,
+"name":"type"
+},
+{
+"parent": 2005,
+"id":2011,
+"name":"identifiers"
+},
+{
+"parent": 2005,
+"id":2012,
+"name":"checksum"
+},
+{
+"parent": 2006,
+"id":2013,
+"name":"type"
+},
+{
+"parent": 2006,
+"id":2014,
+"name":"identifiers"
+},
+{
+"parent": 2006,
+"id":2015,
+"name":"checksum"
+},
+{
+"parent": 2006,
+"id":2016,
+"name":"parameters"
+},
+{
+"parent": 2006,
+"id":2017,
+"name":"environment"
+},
+{
+"parent": 2007,
+"id":2018,
+"name":"role"
+},
+{
+"parent": 2007,
+"id":2019,
+"name":"identifiers"
+},
+{
+"parent": 2008,
+"id":2020,
+"name":"type"
+},
+{
+"parent": 2008,
+"id":2021,
+"name":"identifiers"
+},
+{
+"parent": 2008,
+"id":2022,
+"name":"checksum"
+},
+{
+"parent": 2009,
+"id":2023,
+"name":"[additionalProperties]"
+},
+{
+"parent": 2011,
+"id":2024,
+"name":"type"
+},
+{
+"parent": 2011,
+"id":2025,
+"name":"id"
+},
+{
+"parent": 2014,
+"id":2026,
+"name":"type"
+},
+{
+"parent": 2014,
+"id":2027,
+"name":"id"
+},
+{
+"parent": 2019,
+"id":2028,
+"name":"type"
+},
+{
+"parent": 2019,
+"id":2029,
+"name":"id"
+},
+{
+"parent": 2021,
+"id":2030,
+"name":"type"
+},
+{
+"parent": 2021,
+"id":2031,
+"name":"id"
+},
+{
+"parent": 1000,
+"id":1001,
+"name":"result"
+},
+{
+"parent": 1000,
+"id":1002,
+"name":"input"
+},
+{
+"parent": 1000,
+"id":1003,
+"name":"workflowSteps"
+},
+{
+"parent": 1003,
+"id":1004,
+"name":"description"
+},
+{
+"parent": 1003,
+"id":1005,
+"name":"mode"
+},
+{
+"parent": 1003,
+"id":1006,
+"name":"operators"
+},
+{
+"parent": 1006,
+"id":1007,
+"name":"name"
+},
+{
+"parent": 1006,
+"id":1008,
+"name":"version"
+},
+{
+"parent": 1006,
+"id":1009,
+"name":"parameters"
+},
+{
+"parent": 1006,
+"id":1010,
+"name":"components"
+},
+{
+"parent": 1010,
+"id":1011,
+"name":"name"
+},
+{
+"parent": 1010,
+"id":1012,
+"name":"version"
+},
+{
+"parent": 1010,
+"id":1013,
+"name":"type"
+},
+{
+"parent": 0,
+"id":1000,
+"name":"root_link"
+},
+{
+"parent": 3000,
+"id":3001,
+"name":"provenance"
+},
+{
+"parent": 3001,
+"id":3002,
+"name":"step"
+},
+{
+"parent": 3002,
+"id":3003,
+"name":"order"
+},
+{
+"parent": 3002,
+"id":3004,
+"name":"type"
+},
+{
+"parent": 3002,
+"id":3005,
+"name":"actor"
+},
+{
+"parent": 3002,
+"id":3006,
+"name":"date"
+},
+{
+"parent": 3002,
+"id":3007,
+"name":"method"
+},
+{
+"parent": 3002,
+"id":3008,
+"name":"errorMethod"
+},
+{
+"parent": 3002,
+"id":3009,
+"name":"input"
+},
+{
+"parent": 3002,
+"id":3010,
+"name":"tool"
+},
+{
+"parent": 3002,
+"id":3011,
+"name":"executionCommand"
+},
+{
+"parent": 3002,
+"id":3012,
+"name":"instrument"
+},
+{
+"parent": 3002,
+"id":3013,
+"name":"environment"
+},
+{
+"parent": 3002,
+"id":3014,
+"name":"system"
+},
+{
+"parent": 3002,
+"id":3015,
+"name":"output"
+},
+{
+"parent": 3005,
+"id":3016,
+"name":"name"
+},
+{
+"parent": 3005,
+"id":3017,
+"name":"givenName"
+},
+{
+"parent": 3005,
+"id":3018,
+"name":"familyName"
+},
+{
+"parent": 3005,
+"id":3019,
+"name":"address"
+},
+{
+"parent": 3005,
+"id":3020,
+"name":"affiliation"
+},
+{
+"parent": 3005,
+"id":3021,
+"name":"email"
+},
+{
+"parent": 3005,
+"id":3022,
+"name":"id"
+},
+{
+"parent": 3005,
+"id":3023,
+"name":"role"
+},
+{
+"parent": 3007,
+"id":3024,
+"name":"name"
+},
+{
+"parent": 3007,
+"id":3025,
+"name":"description"
+},
+{
+"parent": 3007,
+"id":3026,
+"name":"parameter"
+},
+{
+"parent": 3008,
+"id":3027,
+"name":"name"
+},
+{
+"parent": 3008,
+"id":3028,
+"name":"description"
+},
+{
+"parent": 3008,
+"id":3029,
+"name":"parameter"
+},
+{
+"parent": 3009,
+"id":3030,
+"name":"id"
+},
+{
+"parent": 3009,
+"id":3031,
+"name":"link"
+},
+{
+"parent": 3009,
+"id":3032,
+"name":"checksum"
+},
+{
+"parent": 3010,
+"id":3033,
+"name":"name"
+},
+{
+"parent": 3010,
+"id":3034,
+"name":"contributor"
+},
+{
+"parent": 3010,
+"id":3035,
+"name":"softwareVersion"
+},
+{
+"parent": 3010,
+"id":3036,
+"name":"programmingLanguage"
+},
+{
+"parent": 3010,
+"id":3037,
+"name":"operatingSystem"
+},
+{
+"parent": 3010,
+"id":3038,
+"name":"URL"
+},
+{
+"parent": 3010,
+"id":3039,
+"name":"SoftwareSourceCode"
+},
+{
+"parent": 3010,
+"id":3040,
+"name":"SoftwareApplication"
+},
+{
+"parent": 3010,
+"id":3041,
+"name":"codeRepository"
+},
+{
+"parent": 3010,
+"id":3042,
+"name":"licence"
+},
+{
+"parent": 3010,
+"id":3043,
+"name":"citation"
+},
+{
+"parent": 3010,
+"id":3044,
+"name":"referencePublication"
+},
+{
+"parent": 3013,
+"id":3045,
+"name":"name"
+},
+{
+"parent": 3013,
+"id":3046,
+"name":"compiler"
+},
+{
+"parent": 3013,
+"id":3047,
+"name":"nodes"
+},
+{
+"parent": 3013,
+"id":3048,
+"name":"ppn"
+},
+{
+"parent": 3013,
+"id":3049,
+"name":"cpu"
+},
+{
+"parent": 3015,
+"id":3050,
+"name":"id"
+},
+{
+"parent": 3015,
+"id":3051,
+"name":"link"
+},
+{
+"parent": 3015,
+"id":3052,
+"name":"checksum"
+},
+{
+"parent": 3022,
+"id":3053,
+"name":"type"
+},
+{
+"parent": 3022,
+"id":3054,
+"name":"scheme"
+},
+{
+"parent": 3022,
+"id":3055,
+"name":"[value]"
+},
+{
+"parent": 3024,
+"id":3056,
+"name":"methodScheme"
+},
+{
+"parent": 3024,
+"id":3057,
+"name":"schemeURI"
+},
+{
+"parent": 3024,
+"id":3058,
+"name":"valueURI"
+},
+{
+"parent": 3024,
+"id":3059,
+"name":"xml:lang"
+},
+{
+"parent": 3024,
+"id":3060,
+"name":"[value]"
+},
+{
+"parent": 3026,
+"id":3061,
+"name":"name"
+},
+{
+"parent": 3026,
+"id":3062,
+"name":"symbol"
+},
+{
+"parent": 3026,
+"id":3063,
+"name":"value"
+},
+{
+"parent": 3026,
+"id":3064,
+"name":"unit"
+},
+{
+"parent": 3026,
+"id":3065,
+"name":"uncertainty"
+},
+{
+"parent": 3027,
+"id":3066,
+"name":"methodScheme"
+},
+{
+"parent": 3027,
+"id":3067,
+"name":"schemeURI"
+},
+{
+"parent": 3027,
+"id":3068,
+"name":"valueURI"
+},
+{
+"parent": 3027,
+"id":3069,
+"name":"xml:lang"
+},
+{
+"parent": 3027,
+"id":3070,
+"name":"[value]"
+},
+{
+"parent": 3029,
+"id":3071,
+"name":"name"
+},
+{
+"parent": 3029,
+"id":3072,
+"name":"symbol"
+},
+{
+"parent": 3029,
+"id":3073,
+"name":"value"
+},
+{
+"parent": 3029,
+"id":3074,
+"name":"unit"
+},
+{
+"parent": 3029,
+"id":3075,
+"name":"uncertainty"
+},
+{
+"parent": 3030,
+"id":3076,
+"name":"type"
+},
+{
+"parent": 3030,
+"id":3077,
+"name":"scheme"
+},
+{
+"parent": 3030,
+"id":3078,
+"name":"[value]"
+},
+{
+"parent": 3032,
+"id":3079,
+"name":"algorithm"
+},
+{
+"parent": 3032,
+"id":3080,
+"name":"[value]"
+},
+{
+"parent": 3034,
+"id":3081,
+"name":"name"
+},
+{
+"parent": 3034,
+"id":3082,
+"name":"givenName"
+},
+{
+"parent": 3034,
+"id":3083,
+"name":"familyName"
+},
+{
+"parent": 3034,
+"id":3084,
+"name":"address"
+},
+{
+"parent": 3034,
+"id":3085,
+"name":"affiliation"
+},
+{
+"parent": 3034,
+"id":3086,
+"name":"email"
+},
+{
+"parent": 3034,
+"id":3087,
+"name":"id"
+},
+{
+"parent": 3034,
+"id":3088,
+"name":"role"
+},
+{
+"parent": 3039,
+"id":3089,
+"name":"id"
+},
+{
+"parent": 3039,
+"id":3090,
+"name":"link"
+},
+{
+"parent": 3039,
+"id":3091,
+"name":"checksum"
+},
+{
+"parent": 3040,
+"id":3092,
+"name":"id"
+},
+{
+"parent": 3040,
+"id":3093,
+"name":"link"
+},
+{
+"parent": 3040,
+"id":3094,
+"name":"checksum"
+},
+{
+"parent": 3044,
+"id":3095,
+"name":"id"
+},
+{
+"parent": 3044,
+"id":3096,
+"name":"citation"
+},
+{
+"parent": 3044,
+"id":3097,
+"name":"url"
+},
+{
+"parent": 3046,
+"id":3098,
+"name":"name"
+},
+{
+"parent": 3046,
+"id":3099,
+"name":"flags"
+},
+{
+"parent": 3050,
+"id":3100,
+"name":"type"
+},
+{
+"parent": 3050,
+"id":3101,
+"name":"scheme"
+},
+{
+"parent": 3050,
+"id":3102,
+"name":"[value]"
+},
+{
+"parent": 3052,
+"id":3103,
+"name":"algorithm"
+},
+{
+"parent": 3052,
+"id":3104,
+"name":"[value]"
+},
+{
+"parent": 3087,
+"id":3105,
+"name":"type"
+},
+{
+"parent": 3087,
+"id":3106,
+"name":"scheme"
+},
+{
+"parent": 3087,
+"id":3107,
+"name":"[value]"
+},
+{
+"parent": 3089,
+"id":3108,
+"name":"type"
+},
+{
+"parent": 3089,
+"id":3109,
+"name":"scheme"
+},
+{
+"parent": 3089,
+"id":3110,
+"name":"[value]"
+},
+{
+"parent": 3091,
+"id":3111,
+"name":"algorithm"
+},
+{
+"parent": 3091,
+"id":3112,
+"name":"[value]"
+},
+{
+"parent": 3092,
+"id":3113,
+"name":"type"
+},
+{
+"parent": 3092,
+"id":3114,
+"name":"scheme"
+},
+{
+"parent": 3092,
+"id":3115,
+"name":"[value]"
+},
+{
+"parent": 3094,
+"id":3116,
+"name":"algorithm"
+},
+{
+"parent": 3094,
+"id":3117,
+"name":"[value]"
+},
+{
+"parent": 3095,
+"id":3118,
+"name":"type"
+},
+{
+"parent": 3095,
+"id":3119,
+"name":"scheme"
+},
+{
+"parent": 3095,
+"id":3120,
+"name":"[value]"
+},
+{
+"parent": 3042,
+"id":3121,
+"name":"TODO"
+},
+{
+"parent": 0,
+"id":3000,
+"name":"root_link"
+}]

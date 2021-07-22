@@ -1,0 +1,73 @@
+[{"id":0,
+"name":"root"
+},
+{
+"parent": 1000,
+"id":1001,
+"name":"result"
+},
+{
+"parent": 1000,
+"id":1002,
+"name":"input"
+},
+{
+"parent": 1000,
+"id":1003,
+"name":"workflowSteps"
+},
+{
+"parent": 1003,
+"id":1004,
+"name":"description"
+},
+{
+"parent": 1003,
+"id":1005,
+"name":"mode"
+},
+{
+"parent": 1003,
+"id":1006,
+"name":"operators"
+},
+{
+"parent": 1006,
+"id":1007,
+"name":"name"
+},
+{
+"parent": 1006,
+"id":1008,
+"name":"version"
+},
+{
+"parent": 1006,
+"id":1009,
+"name":"parameters"
+},
+{
+"parent": 1006,
+"id":1010,
+"name":"components"
+},
+{
+"parent": 1010,
+"id":1011,
+"name":"name"
+},
+{
+"parent": 1010,
+"id":1012,
+"name":"version"
+},
+{
+"parent": 1010,
+"id":1013,
+"name":"type"
+},
+{
+"parent": 0,
+"id":1000,
+"name":"root_link"
+}]
